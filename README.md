@@ -3,14 +3,14 @@
     shadowsocks client for socks5 proxy
     privoxy for http proxy
 
-## 镜像提交:
+## Image:
 
 ~~~
-docker push bluebu/shadowsocks-privoxy
+docker pull bluebu/shadowsocks-privoxy
 ~~~
 
 
-## 执行示例:
+## Run:
 
 ~~~
 docker run -i -t -e SERVER_ADDR=ss.server.ip -e SERVER_PORT=port -e PASSWORD=123456 -k $PASSWORD bluebu/shadowsocks-privoxy
