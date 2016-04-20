@@ -1,0 +1,26 @@
+# Ignore Docker
+.git*
+.gitkeep
+build.sh
+.build
+tmp
+vagrant
+packaging
+log/*
+vendor/ruby
+.bundle
+.DS_Store
+.ruby-version
+Procfile
+.project
+TODOLIST.md
+CHANGELOG.md
+nohup.out
+caishuo_features
+.arcconfig
+public/images
+public/javascripts
+public/stylesheets
+coverage/
+rerun.txt
+config/drivers.yml
