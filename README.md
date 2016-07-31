@@ -2,6 +2,7 @@
 
     shadowsocks client for socks5 proxy
     privoxy for http proxy
+    Only 16MB size
 
 ## Image:
 
