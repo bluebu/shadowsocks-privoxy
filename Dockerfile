@@ -8,11 +8,16 @@ MAINTAINER bluebu <bluebuwang@gmail.com>
 RUN \
   apk --update --upgrade add \
       py-pip \
-      # openssh \
       privoxy \
   && rm /var/cache/apk/*
 
 RUN pip install shadowsocks
+
+ENV SERVER_ADDR= \
+    SERVER_PORT=8899  \
+    METHOD=aes-256-cfb \
+    TIMEOUT=300 \
+    PASSWORD=
 
 #------------------------------------------------------------------------------
 # Populate root file system:
@@ -25,5 +30,4 @@ ADD rootfs /
 #------------------------------------------------------------------------------
 EXPOSE 8118 7070
 
-# ENTRYPOINT ["/usr/sbin/privoxy", "--no-daemon", "/etc/privoxy/config"]
 ENTRYPOINT ["/entrypoint.sh"]
